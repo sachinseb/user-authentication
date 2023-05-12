@@ -9,6 +9,15 @@ app.get("/", (req, res) => {
   });
 });
 
+app.post("/about", (req, res) => {
+  let { name, email } = req.body;
+  res.json({
+    message: "data",
+    name,
+    email,
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Listening on http://localhost:${PORT}`);
 });
